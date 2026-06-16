@@ -179,7 +179,7 @@ public class DatabaseManager {
         return 0;
     }
 
-    // Get total server vote count  
+    // Get total server vote count
     public int getServerVoteCount() {
         try (Connection conn = dataSource.getConnection();
              PreparedStatement stmt = conn.prepareStatement("SELECT COUNT(*) FROM " + votesTable)) {
@@ -192,6 +192,43 @@ public class DatabaseManager {
             logger.severe("Failed to get total server vote count: " + e.getMessage());
         }
         return 0;
+    }
+
+    // Get player rank by all-time vote count (1 = top voter, 0 = never voted)
+    public int getPlayerRank(PlayerEnv tgt_playerEnv) {
+        String sql = "SELECT COUNT(*) + 1 FROM ("
+                   + "SELECT player_uuid, COUNT(*) as vote_count FROM " + votesTable + " GROUP BY player_uuid"
+                   + ") subq WHERE vote_count > (SELECT COUNT(*) FROM " + votesTable + " WHERE player_uuid = ?)";
+        try (Connection conn = dataSource.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, tgt_playerEnv.uuid.toString());
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getInt(1);
+                }
+            }
+        } catch (SQLException e) {
+            logger.severe("Error getting player rank: " + e.getMessage());
+        }
+        return 0;
+    }
+
+    // Check if player has cast any vote since the given timestamp
+    public boolean hasVotedSince(PlayerEnv tgt_playerEnv, Timestamp since) {
+        String sql = "SELECT COUNT(*) FROM " + votesTable + " WHERE player_uuid = ? AND vote_ts >= ?";
+        try (Connection conn = dataSource.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, tgt_playerEnv.uuid.toString());
+            pstmt.setTimestamp(2, since);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getInt(1) > 0;
+                }
+            }
+        } catch (SQLException e) {
+            logger.severe("Error checking recent vote for player: " + e.getMessage());
+        }
+        return false;
     }
 
     // Get top voters

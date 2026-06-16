@@ -1,0 +1,84 @@
+# ================================================================
+#   🏆 DelphiVote 🏆
+# 
+#   Creado con ❤️ por Obzidi4n
+#
+#   🔌 SpigotMC: https://www.spigotmc.org/resources/delphivote.12345/
+#   🌟 GitHub: https://github.com/obzidi4n/delphivote
+#   💬 Discord: https://discord.gg/2BbV34jUDT
+#   🏠 Servidor Principal: Delphicraft (playdelphi.com)
+#   
+#   Configuración de Mensajes (Español):
+#   Este archivo contiene todos los mensajes que el plugin mostrará al jugador.
+#
+#   Marcadores disponibles:
+#
+#      {player} - El nombre del jugador que votó
+#      {votes} - El número de votos que tiene el jugador
+#      {service} - El nombre del sitio donde el jugador votó
+#      {reward} - El nombre de la recompensa que recibió el jugador
+#      %placeholderapi-tag% - Cualquier etiqueta PlaceholderAPI válida
+#
+#   Asegúrate de encerrar las cadenas entre comillas ('') si contienen códigos de formato especiales como & o colores hex.
+#
+# ================================================================
+addplayer_not_found: "&cJugador {player} no encontrado."
+addplayer_success: "&aEl jugador {player} ha sido añadido a la base de datos."
+addplayer_usage: "&cUso: /vote addplayer <nombreJugador>"
+give_reward_fail: "&c¡Entrega de recompensa fallida! Uso: /vote give reward <recompensa> <jugador>"
+give_reward_success_player: "&a¡Has recibido una recompensa: &b{reward}&a!"
+give_reward_success: "&a¡Recompensa &b{reward}&a entregada a &b{player}&a!"
+give_vote_fail: "&c¡Voto fallido! Uso: /vote give vote <jugador>"
+help_header: "\n&6===== Ayuda de DelphiVote =====&r"
+help_addplayer: "&e/vote addplayer <jugador>&r: Añadir jugador a la base de datos"
+help_give_reward: "&e/vote give reward <recompensa> <jugador>&r: Dar una recompensa"
+help_give_vote: "&e/vote give vote <jugador>&r: Dar un voto"
+help_info: "&e/vote info&r: Ver información del plugin"
+help_list_rewards: "&e/vote rewards&r: Listar todas las recompensas"
+help_reload: "&e/vote reload&r: Recargar la configuración del plugin"
+help_stats: "&e/vote stats&r: Ver los 10 mejores votantes"
+help_stats_player: "&e/vote stats <jugador>&r: Ver estadísticas de voto de un jugador"
+help_vote: "&e/vote&r: ¡Votar por el servidor!"
+help_footer: "\n"
+no_command: "&cLo siento, no entiendo ese comando. Por favor, usa /vote help."
+no_permission: "&cNo tienes permiso para ejecutar este comando."
+no_vote_sites: "&cNo hay sitios de votación configurados actualmente."
+offline_reward_given: "&a¡Has recibido una recompensa por votar: &b{reward}&a!"
+player_not_found: "&cJugador &e{player}&c no encontrado o no está en línea."
+player_stats_header: "&6===== Estadísticas de Votación: &a{player} &6=====&r"
+player_stats_votes: "&bVotos Totales: &a{votes}"
+player_stats_last_vote: "&bÚltimo Voto: &a{last_vote}"
+player_stats_footer: "\n"
+plugin_error: "&cError del Plugin DelphiVote"
+plugin_info_header: "\n&6===== Información de DelphiVote =====&r"
+plugin_info_author: "&bAutor: &a{author}"
+plugin_info_name: "&bNombre: &a{name}"
+plugin_info_url: "&bSitio web: &a{url}"
+plugin_info_version: "&bVersión: &a{version}"
+plugin_info_url_hover: ¡Haz clic para visitar la página del plugin!
+plugin_info_footer: "\n"
+plugin_reload_false: "&aDelphiVote no se recargó correctamente."
+plugin_reload_true: "&aLa configuración de DelphiVote se recargó correctamente."
+reward_list_header: "&6===== Recompensas Disponibles ====="
+reward_list_item: "&b{key}"
+reward_list_error: "&cError: No se pudo obtener la lista de recompensas."
+reward_list_footer: "\n"
+top_voters_header: "\n&6===== Top 10 Votantes =====&r"
+top_voter_item: "&e#{rank} &b{player}: &a{votes} votos"
+top_voters_last_item: "&6Usa &e/vote stats <jugador>&6 para ver estadísticas individuales."
+top_voters_footer: "\n"
+total_server_votes: "&bTotal del Servidor: &e{total_votes}"
+trigger_list_error: "&cError: No se pudo obtener la lista de disparadores."
+trigger_list_header: "&6===== Disparadores Disponibles ====="
+trigger_list_item: "&b{key}"
+trigger_list_footer: "\n"
+vote_site_header: "\n&6===== Sitios de Votación =====&r"
+vote_site_first_item: "&6¡Haz clic en un sitio para votar!"
+vote_site_entry: "&e➤ &b{site_name}"
+vote_site_hover: ¡Haz clic para votar!
+vote_site_not_found: "&cSitio de votación &e{site_name}&c no encontrado."
+vote_site_redirect: "&6Abriendo página de votación para &e{site_name}&6..."
+vote_site_footer: "\n"
+vote_success_broadcast: "&a¡{player} votó en {service}!"
+vote_success_player: "&a¡Has recibido un voto de {service}!"
+vote_success: "&a¡Voto otorgado a {player}!"
