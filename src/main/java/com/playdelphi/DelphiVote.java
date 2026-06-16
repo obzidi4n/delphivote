@@ -84,6 +84,12 @@ public class DelphiVote extends JavaPlugin implements Listener {
         commandManager = new CommandManager(this);
         getCommand("vote").setExecutor(commandManager);
 
+        // Register PlaceholderAPI expansion
+        if (getServer().getPluginManager().isPluginEnabled("PlaceholderAPI")) {
+            new PlaceholderManager(this).register();
+            getLogger().info("PlaceholderAPI expansion registered.");
+        }
+
         // Complete plugin enable
         getLogger().info("DelphiVote plugin has been enabled!");
         startPeriodicTasks();
