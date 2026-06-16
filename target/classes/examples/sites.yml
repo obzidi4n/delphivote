@@ -1,0 +1,56 @@
+# ================================================================
+#   🏆 DelphiVote 🏆
+# 
+#   Crafted with ❤️ by Obzidi4n
+#
+#   🔌 SpigotMC: https://www.spigotmc.org/resources/delphivote.12345/
+#   🌟 GitHub: https://github.com/obzidi4n/delphivote
+#   🏠 Home Server: Delphicraft (playdelphi.com)
+#   
+#   Voting Sites Format:
+#
+#   site_id:                  (required, string with underscores, must be unique.)
+#     site_name:              (required, string)
+#     site_vote_url:          (required, string. Direct link to the vote page)
+#     site_active:            (optional, true/false, default is true. Conveniently toggle the listing on/off)
+#
+#   Example:
+#
+#   planet_minecraft:
+#     site_name: PlanetMinecraft.com
+#     site_vote_url: https://www.planetminecraft.com/server/delphicraft-minecraft-factions-smp-survival-mcmmo-rpg/vote/
+#     site_active: true
+#
+# ================================================================
+planet_minecraft:
+  site_name: PlanetMinecraft.com
+  site_vote_url: https://www.planetminecraft.com/server/delphicraft-minecraft-factions-smp-survival-mcmmo-rpg/vote/
+  site_active: false
+mcserverlist:
+  site_name: minecraft-server-list.com
+  site_vote_url: https://minecraft-server-list.com/server/62142/vote/
+  site_active: true 
+topg:
+  site_name: mcservers.top
+  site_vote_url: https://mcservers.top/server/457
+  site_active: false
+topminecraftservers:
+  site_name: topminecraftservers.org
+  site_vote_url: https://topminecraftservers.org/vote/9667
+  site_active: false
+mcservers:
+  site_name: mc-servers.com
+  site_vote_url: https://mc-servers.com/vote/3655
+  site_active: true
+minecraftservernet:
+  site_name: minecraft-server.net
+  site_vote_url: https://minecraft-server.net/vote/delphicraft/
+  site_active: true
+serverpact:
+  site_name: serverpact.com
+  site_vote_url: https://www.serverpact.com/vote-25275
+  site_active: true
+epicmcservers:
+  site_name: epicminecraftservers.com
+  site_vote_url: https://epicminecraftservers.com/server-delphicraft.142#/votepg
+  site_active: false

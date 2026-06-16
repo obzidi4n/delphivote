@@ -1,0 +1,84 @@
+# ================================================================
+#   🏆 DelphiVote 🏆
+# 
+#   Crafted with ❤️ by Obzidi4n
+#
+#   🔌 SpigotMC: https://www.spigotmc.org/resources/delphivote.12345/
+#   🌟 GitHub: https://github.com/obzidi4n/delphivote
+#   💬 Discord: https://discord.gg/2BbV34jUDT
+#   🏠 Home Server: Delphicraft (playdelphi.com)
+#   
+#   Message Configuration (US English):
+#   This file contains all the messages that the plugin will display to the player.
+#
+#   Available placeholders:
+#
+#      {player} - The name of the player who voted
+#      {votes} - The number of votes the player has
+#      {service} - The name of the site that the player voted on
+#      {reward} - The name of the reward that the player received
+#      %placeholderapi-tag% - Any valid PlaceholderAPI tag
+#
+#   Be sure to enclose strings in quotes ('') if they contain special formatting codes such as & or hex colors.
+#
+# ================================================================
+addplayer_not_found: "&cPlayer {player} not found."
+addplayer_success: "&aPlayer {player} has been added to the database."
+addplayer_usage: "&cUsage: /vote addplayer <playerName>"
+give_reward_fail: "&cGive reward failed! Usage: /vote give reward <reward> <player>"
+give_reward_success_player: "&aYou received a reward: &b{reward}&a!"
+give_reward_success: "&aReward &b{reward}&a given to &b{player}&a!"
+give_vote_fail: "&cVote failed! Usage: /vote give vote <player>"
+help_header: "\n&6===== DelphiVote Help =====&r"
+help_addplayer: "&e/vote addplayer <player>&r: Add player to the database"
+help_give_reward: "&e/vote give reward <reward> <player>&r: Give a reward"
+help_give_vote: "&e/vote give vote <player>&r: Give a vote"
+help_info: "&e/vote info&r: View plugin information"
+help_list_rewards: "&e/vote rewards&r: List all rewards"
+help_reload: "&e/vote reload&r: Reload the plugin configuration"
+help_stats: "&e/vote stats&r: View top 10 voters"
+help_stats_player: "&e/vote stats <player>&r: View a player's voting stats"
+help_vote: "&e/vote&r: Vote for the server!"
+help_footer: "\n"
+no_command: "&cSorry, I don't understand that command. Please use /vote help."
+no_permission: "&cYou do not have permission to execute this command."
+no_vote_sites: "&cNo voting sites are currently configured."
+offline_reward_given: "&aYou received a vote reward: &b{reward}&a!"
+player_not_found: "&cPlayer &e{player}&c not found or is not online."
+player_stats_header: "&6===== Voting Stats: &a{player} &6=====&r"
+player_stats_votes: "&bTotal Votes: &a{votes}"
+player_stats_last_vote: "&bLast Vote: &a{last_vote}"
+player_stats_footer: "\n"
+plugin_error: "&cDelphiVote Plugin Error"
+plugin_info_header: "\n&6===== DelphiVote Info =====&r"
+plugin_info_author: "&bAuthor: &a{author}"
+plugin_info_name: "&bName: &a{name}"
+plugin_info_url: "&bWebsite: &a{url}"
+plugin_info_version: "&bVersion: &a{version}"
+plugin_info_url_hover: "&aClick to visit the plugin page!"
+plugin_info_footer: "\n"
+plugin_reload_false: "&aDelphiVote did not reload successfully."
+plugin_reload_true: "&aDelphiVote configuration reloaded successfully."
+reward_list_header: "&6===== Available Rewards ====="
+reward_list_item: "&b{key}"
+reward_list_error: "&cError: Unable to retrieve the reward list."
+reward_list_footer: "\n"
+top_voters_header: "\n&6===== Top 10 Voters =====&r"
+top_voter_item: "&e#{rank} &b{player}: &a{votes} votes"
+top_voters_last_item: "&6Use &e/vote stats <player>&6 to see individual stats."
+top_voters_footer: "\n"
+total_server_votes: "&bServer Total: &e{total_votes}"
+trigger_list_error: "&cError: Unable to retrieve the trigger list."
+trigger_list_header: "&6===== Available Triggers ====="
+trigger_list_item: "&b{key}"
+trigger_list_footer: "\n"
+vote_site_header: "\n&6===== Voting Sites =====&r"
+vote_site_first_item: "&6Click on a site to vote!"
+vote_site_entry: "&e➤ &b{site_name}"
+vote_site_hover: Click to vote!
+vote_site_not_found: "&cVoting site &e{site_name}&c not found."
+vote_site_redirect: "&6Opening voting page for &e{site_name}&6..."
+vote_site_footer: "\n"
+vote_success_broadcast: "&a{player} voted on {service}!"
+vote_success_player: "&aYou received a vote from {service}!"
+vote_success: "&aVote given to {player}!"

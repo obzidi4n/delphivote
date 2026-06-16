@@ -1,0 +1,24 @@
+# ================================================================
+#   🏆 DelphiVote 🏆
+# 
+#   Crafted with ❤️ by Obzidi4n
+#
+#   🔌 SpigotMC: https://www.spigotmc.org/resources/delphivote.12345/
+#   🌟 GitHub: https://github.com/obzidi4n/delphivote
+#   🏠 Home Server: Delphicraft (playdelphi.com)
+#   
+#   Voting Sites Format:
+#
+#   site_id:                  (required, string with underscores, must be unique.)
+#     site_name:              (required, string)
+#     site_vote_url:          (required, string. Direct link to the vote page)
+#     site_active:            (optional, true/false, default is true. Conveniently toggle the listing on/off)
+#
+#   Example:
+#
+#   planet_minecraft:
+#     site_name: PlanetMinecraft.com
+#     site_vote_url: https://www.planetminecraft.com/server/delphicraft-minecraft-factions-smp-survival-mcmmo-rpg/vote/
+#     site_active: true
+#
+# ================================================================

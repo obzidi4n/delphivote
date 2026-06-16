@@ -1,0 +1,175 @@
+# ================================================================
+# 🏆 DelphiVote 🏆
+# 
+# Crafted with ❤️ by Obzidi4n
+#
+# 🔌 SpigotMC: https://www.spigotmc.org/resources/delphivote.119390/
+# 🌟 GitHub: https://github.com/obzidi4n/delphivote
+# 💬 Discord: https://discord.gg/2BbV34jUDT
+# 🏠 Home Server: Delphicraft - playdelphi.com
+# 
+# Reward Format:
+# 
+# reward_id:                  (required, string with underscores, must be unique. Corresponds to reward_triggers.yml items)
+#   reward_name:              (required, string)
+#   reward_items:             (required, list of items to give)
+#   - item:                 (required, valid minecraft item name or Head Database ID starting with 'hdb-')
+#     title:                (optional, string)
+#     quantity:             (required, integer greater than 0)
+#     lore:                 (optional, list of strings)
+#     commands:             (optional, list of console commands to execute when the item is given, can use {player} placeholder for the player's name)
+#  reward_randomized:         (optional, true/false, default is false. If true, the items will be randomized)
+#  reward_max_items:          (optional, integer, default 0 grants all items. Use in conjunction with reward_randomized to create variety of rewards)
+#
+# Available placeholders:
+#
+#  {player} - The name of the player who voted
+# 
+# Be sure to enclose strings in quotes ("") if they contain special formatting codes such as & or hex colors.
+#
+# Examples:
+# 
+# diamond_pack:
+#   reward_name: Vote Reward
+#   reward_items:
+#   - item: DIAMOND
+#     title: Vote Diamond
+#     quantity: 1
+#     lore:
+#       - Thank you for voting!
+#       - '&aKeep voting for special rewards!'
+#   - item: AIR
+#     title: Console Command
+#     quantity: 1
+#     commands:
+#       - effect give {player} minecraft:speed 5 1 true
+#       - effect give {player} minecraft:jump_boost 5 1 true
+# server_celebration_pack:
+#   reward_name: Random Rewards for Everyone
+#   reward_items:
+#   - item: FIREWORK_ROCKET
+#     title: Celebration Firework
+#     quantity: 16
+#     lore:
+#       - Let's celebrate our server milestone!
+#   - item: CAKE
+#     title: Celebration Cake
+#     quantity: 1
+#     lore:
+#       - A delicious cake for everyone!
+#   - item: DIAMOND_SWORD
+#     title: Warrior's Blade
+#     quantity: 1
+#     lore:
+#       - A powerful sword for your battles.
+#   - item: IRON_PICKAXE
+#     title: Miner's Friend
+#     quantity: 1
+#     lore:
+#       - An enchanted pickaxe for your mining adventures.
+#   - item: GOLDEN_APPLE
+#     title: Golden Delight
+#     quantity: 3
+#     lore:
+#       - A golden apple to keep you healthy.
+#   reward_randomized: true
+#   reward_max_items: 3
+#
+# ================================================================
+diamond_pack:
+  reward_name: Vote Reward
+  reward_items:
+  - item: DIAMOND
+    title: Vote Diamond
+    quantity: 1
+    lore:
+      - Thank you for voting!
+      - '&aKeep voting for special rewards!'
+  - item: AIR
+    title: Console Command
+    quantity: 1
+    commands:
+      - effect give {player} minecraft:speed 5 1 true
+      - effect give {player} minecraft:jump_boost 5 1 true
+  reward_randomized: false
+  reward_max_items: 0
+welcome_pack:
+  reward_name: Welcome Pack
+  reward_items:
+  - item: DIAMOND
+    title: Welcome Diamond
+    quantity: 1
+    lore:
+      - A special diamond for your first vote!
+  - item: COOKED_BEEF
+    title: Hearty Meal
+    quantity: 16
+    lore:
+      - A delicious steak to start your journey.
+  reward_randomized: false
+  reward_max_items: 0
+intermediate_pack:
+  reward_name: Intermediate Pack
+  reward_items:
+  - item: IRON_PICKAXE
+    title: Miner's Friend
+    quantity: 1
+    lore:
+      - An enchanted pickaxe for your mining adventures.
+  - item: GOLDEN_APPLE
+    title: Golden Delight
+    quantity: 3
+    lore:
+      - A golden apple to keep you healthy.
+  reward_randomized: false
+  reward_max_items: 0
+advanced_pack:
+  reward_name: Advanced Pack
+  reward_items:
+  - item: DIAMOND_SWORD
+    title: Warrior's Blade
+    quantity: 1
+    lore:
+      - A powerful sword for your battles.
+  - item: ENCHANTED_GOLDEN_APPLE
+    title: Notch Apple
+    quantity: 1
+    lore:
+      - The ultimate golden apple.
+  - item: EXPERIENCE_BOTTLE
+    title: Wisdom in a Bottle
+    quantity: 16
+    lore:
+      - A boost of experience.
+  reward_randomized: true
+  reward_max_items: 2
+server_celebration_pack:
+  reward_name: Random Rewards for Everyone
+  reward_items:
+  - item: FIREWORK_ROCKET
+    title: Celebration Firework
+    quantity: 16
+    lore:
+      - Let's celebrate our server milestone!
+  - item: CAKE
+    title: Celebration Cake
+    quantity: 1
+    lore:
+      - A delicious cake for everyone!
+  - item: DIAMOND_SWORD
+    title: Warrior's Blade
+    quantity: 1
+    lore:
+      - A powerful sword for your battles.
+  - item: IRON_PICKAXE
+    title: Miner's Friend
+    quantity: 1
+    lore:
+      - An enchanted pickaxe for your mining adventures.
+  - item: GOLDEN_APPLE
+    title: Golden Delight
+    quantity: 3
+    lore:
+      - A golden apple to keep you healthy.
+  reward_randomized: true
+  reward_max_items: 3

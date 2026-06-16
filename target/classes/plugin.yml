@@ -1,0 +1,34 @@
+name: DelphiVote
+version: '1.6'
+main: com.playdelphi.DelphiVote
+api-version: '1.21'
+depend: [Votifier]
+softdepend: ['HeadDatabase', 'PlaceholderAPI']
+authors: [Obzidi4n]
+description: A Minecraft plugin for vote listening and reward management
+website: https://www.spigotmc.org/resources/delphivote.119390/
+commands:
+  vote:
+    description: Main command for DelphiVote plugin
+    usage: /<command> [subcommand]
+    aliases: [dv]
+permissions:
+  delphivote.player:
+    description: Allows access to basic voting commands
+    default: false
+  delphivote.admin:
+    description: Allows access to all DelphiVote admin commands
+    default: op
+    children:
+      delphivote.player: true
+resources:
+  - config.yml
+  - sites.yml
+  - reward_items.yml
+  - reward_triggers.yml
+  - examples/sites.yml
+  - examples/reward_items.yml
+  - examples/reward_triggers.yml
+  - lang/messages-en.yml
+  - lang/messages-es.yml
+  - lang/messages-pt.yml

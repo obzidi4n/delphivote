@@ -1,0 +1,34 @@
+# ================================================================
+#   🏆 DelphiVote 🏆
+# 
+#   Crafted with ❤️ by Obzidi4n
+#
+#   🔌 SpigotMC: https://www.spigotmc.org/resources/delphivote.12345/
+#   🌟 GitHub: https://github.com/obzidi4n/delphivote
+#   💬 Discord: https://discord.gg/2BbV34jUDT
+#   🏠 Home Server: Delphicraft (playdelphi.com)
+#   
+#   Main Configuration:
+#
+#   database:
+#     type:             (required, string, 'sqlite' or 'mysql')
+#     host:             (required for mysql, string, 'localhost' or IP address)
+#     port:             (required for mysql, integer, 3306)
+#     database:         (required for mysql, string, database name)
+#     username:         (required for mysql, string, database user)
+#     password:         (required for mysql, string, database user password)
+#     table_prefix:     (recommended, string, 'dv' or any custom prefix)
+#   votes_expire:       (required, integer, number of days until offline votes and rewards are deleted)
+#   language:           (required, string,language file to use, see languages folder)
+#
+# ================================================================
+database: 
+  type: sqlite
+  host: localhost
+  port: 3306
+  database: your_database
+  username: your_username
+  password: your_password
+  table_prefix: dv
+rewards_expire: 90
+language: messages-en.yml
