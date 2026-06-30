@@ -9,14 +9,17 @@ permissions:
   issues: read
 
 safe-outputs:
-  # Protect the workflow by only allowing 1 assignment execution per run
+  # Explicitly binds your secret token to clear the runtime engine check
+  github-token: ${{ secrets.COPILOT_GITHUB_TOKEN }}
+
   assign-to-agent:
     name: "copilot"
     model: "auto"
     max: 1
-    target: "triggering" # Automatically hands off the issue that triggered this run
-    base-branch: "main" # The target branch where Copilot should open its PR
+    target: "triggering"
+    base-branch: "main"
 ---
+
 
 # Trigger Copilot Coding Agent
 
