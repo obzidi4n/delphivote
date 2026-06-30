@@ -7,10 +7,9 @@ on:
 permissions:
   contents: read
   issues: read
+  copilot-requests: write
 
 safe-outputs:
-  # Explicitly binds your secret token to clear the runtime engine check
-  github-token: ${{ secrets.COPILOT_GITHUB_TOKEN }}
 
   assign-to-agent:
     name: "copilot"
