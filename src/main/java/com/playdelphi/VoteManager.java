@@ -36,19 +36,22 @@ public class VoteManager {
         try {
             databaseManager.addVote(playerEnv, tgt_playerEnv, serviceName);
 
+            int voteCount = databaseManager.getPlayerVoteCount(tgt_playerEnv);
+            String voteCountStr = String.valueOf(voteCount);
+
              // Message to initiating player
             if (playerEnv.uuid != tgt_playerEnv.uuid && playerEnv.player != null) {
-                playerEnv.sendMessage(languageManager.getMessage("vote_success", Map.of("player", tgt_playerEnv.name, "service", serviceName)));
+                playerEnv.sendMessage(languageManager.getMessage("vote_success", Map.of("player", tgt_playerEnv.name, "service", serviceName, "votes", voteCountStr)));
             }
 
             // Message to target player
             if (tgt_playerEnv.player != null) { 
-                tgt_playerEnv.sendMessage(languageManager.getMessage("vote_success_player", Map.of("service", serviceName)));    
+                tgt_playerEnv.sendMessage(languageManager.getMessage("vote_success_player", Map.of("player", tgt_playerEnv.name, "service", serviceName, "votes", voteCountStr)));    
             }
 
             // Broadcast to server
             if (!serviceName.equals("Admin")) {
-                plugin.getServer().broadcastMessage(languageManager.getMessage("vote_success_broadcast", Map.of("player", tgt_playerEnv.name, "service", serviceName)));    
+                plugin.getServer().broadcastMessage(languageManager.getMessage("vote_success_broadcast", Map.of("player", tgt_playerEnv.name, "service", serviceName, "votes", voteCountStr)));    
             }
             
             } catch (Exception e) {
