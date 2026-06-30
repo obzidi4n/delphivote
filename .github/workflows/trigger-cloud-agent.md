@@ -1,5 +1,5 @@
 ---
-name: Auto-Trigger Copilot Coding Agent
+name: trigger-cloud-agent
 on:
   issues:
     types: [opened, labeled]
