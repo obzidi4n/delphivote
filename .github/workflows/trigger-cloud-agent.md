@@ -15,7 +15,7 @@ safe-outputs:
     model: "auto"
     max: 1
     target: "triggering" # Automatically hands off the issue that triggered this run
-    base-branch: "main"   # The target branch where Copilot should open its PR
+    base-branch: "main" # The target branch where Copilot should open its PR
 ---
 
 # Trigger Copilot Coding Agent
