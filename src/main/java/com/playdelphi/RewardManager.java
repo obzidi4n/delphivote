@@ -106,13 +106,19 @@ public class RewardManager {
             }
             
             // send broadcastmessage for this trigger
-            if (!serviceName.equals("Admin")) {
-                plugin.getServer().broadcastMessage(formatTriggerMessage(broadcastMessage, tgt_playerEnv.name, voteCount, serviceName));
+            if (!serviceName.equals("Admin") && broadcastMessage != null) {
+                String formattedBroadcast = formatTriggerMessage(broadcastMessage, tgt_playerEnv.name, voteCount, serviceName);
+                if (formattedBroadcast != null) {
+                    plugin.getServer().broadcastMessage(formattedBroadcast);
+                }
             }
 
             // send player message for this trigger, if player is online
-            if (tgt_playerEnv.player != null) {
-                tgt_playerEnv.player.sendMessage(formatTriggerMessage(playerMessage, tgt_playerEnv.name, voteCount, serviceName));
+            if (tgt_playerEnv.player != null && playerMessage != null) {
+                String formattedMessage = formatTriggerMessage(playerMessage, tgt_playerEnv.name, voteCount, serviceName);
+                if (formattedMessage != null) {
+                    tgt_playerEnv.player.sendMessage(formattedMessage);
+                }
             }
 
         } else if (triggerUser.equals("server")) {
@@ -135,8 +141,11 @@ public class RewardManager {
                 }
 
                 // send player message for this trigger, if player is online
-                if (svr_playerEnv.player != null) {
-                    svr_playerEnv.player.sendMessage(formatTriggerMessage(playerMessage, svr_playerEnv.name, voteCount, serviceName));
+                if (svr_playerEnv.player != null && playerMessage != null) {
+                    String formattedMessage = formatTriggerMessage(playerMessage, svr_playerEnv.name, voteCount, serviceName);
+                    if (formattedMessage != null) {
+                        svr_playerEnv.player.sendMessage(formattedMessage);
+                    }
                 }
 
                 // close PlayerEnv if player is offline
@@ -146,7 +155,12 @@ public class RewardManager {
             }
 
             // send broadcastmessage for this trigger
-            plugin.getServer().broadcastMessage(formatTriggerMessage(broadcastMessage, playerEnv.name, voteCount, serviceName));
+            if (broadcastMessage != null) {
+                String formattedBroadcast = formatTriggerMessage(broadcastMessage, playerEnv.name, voteCount, serviceName);
+                if (formattedBroadcast != null) {
+                    plugin.getServer().broadcastMessage(formattedBroadcast);
+                }
+            }
         }
     }
 

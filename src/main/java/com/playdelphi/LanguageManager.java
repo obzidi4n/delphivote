@@ -50,6 +50,9 @@ public class LanguageManager {
 
     // lookup message by key, process color codes
     public String getMessage(String key) {
+        if (key == null) {
+            return null;
+        }
         String message = messages.getOrDefault(key, "Message not found: " + key);
         // Process color codes after getting the message
         return ChatColor.translateAlternateColorCodes('&', message);
@@ -57,6 +60,9 @@ public class LanguageManager {
 
     // override: lookup message by key, insert DelphiVote placeholders, process color codes
     public String getMessage(String key, Map<String, String> placeholders) {
+        if (key == null) {
+            return null;
+        }
         String message = messages.getOrDefault(key, key);
 
         // process DelphiVote placeholders
